@@ -36,19 +36,13 @@ class TestViewModel: NSObject, ObservableObject {
         let berlinThree = MKPointAnnotation()
         berlinThree.title = "Berlin Three"
         berlinThree.coordinate = CLLocationCoordinate2D(latitude: 52.5204, longitude: 13.4056)
-        
-    
-        
-        locations.append(london)
-        locations.append(londonTwo)
-        locations.append(londonThree)
+
         //These should initially zoom in.
-        
+        locations.append(contentsOf: [london, londonTwo, londonThree])
+
         let seconds = 7.0
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
-            self.locations.append(berlin)
-            self.locations.append(berlinTwo)
-            self.locations.append(berlinThree)
+            self.locations.append(contentsOf: [berlin, berlinTwo, berlinThree])
             //These should just appear on the map but not pan the map to show them.
         }
 
