@@ -3,22 +3,27 @@ import SwiftUI
 import MapKit
 
 struct TestMapView: UIViewRepresentable {
+
+    final class Coordinator {
+        var hasZoomed = false
+    }
     
-    @Binding var map : MKMapView
     @Binding var locations: [MKPointAnnotation]
-    @State var hasZoomed = false
+
+    func makeCoordinator() -> Coordinator {
+        Coordinator()
+    }
     
     func makeUIView(context: Context) -> MKMapView {
-        return map
+        return MKMapView(frame: .zero)
     }
     
     func updateUIView(_ view: MKMapView, context: Context) {
-        self.map.addAnnotations(locations)
-        
-        //I only want to call this once.
-        if(!hasZoomed && !self.locations.isEmpty) {
-            self.map.showAnnotations(locations, animated: false)
-            hasZoomed = true //here i get a warning "Modifying state during view update, this will cause undefined behavior."
+        view.removeAnnotations(view.annotations)
+        view.addAnnotations(locations)
+        if(!context.coordinator.hasZoomed && !self.locations.isEmpty) {
+            view.showAnnotations(locations, animated: false)
+            context.coordinator.hasZoomed = true
         }
     }
 }
