@@ -11,6 +11,8 @@
 		F220A6B7266F041B00319F2F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220A6B6266F041B00319F2F /* ContentView.swift */; };
 		F220A6B9266F041D00319F2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F220A6B8266F041D00319F2F /* Assets.xcassets */; };
 		F220A6BC266F041D00319F2F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F220A6BB266F041D00319F2F /* Preview Assets.xcassets */; };
+		F220A6C4266F053500319F2F /* TestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220A6C3266F053500319F2F /* TestViewModel.swift */; };
+		F220A6C6266F082200319F2F /* TestMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220A6C5266F082200319F2F /* TestMapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		F220A6B8266F041D00319F2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F220A6BB266F041D00319F2F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F220A6BD266F041D00319F2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F220A6C3266F053500319F2F /* TestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModel.swift; sourceTree = "<group>"; };
+		F220A6C5266F082200319F2F /* TestMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 			children = (
 				F220A6B4266F041B00319F2F /* TestProjectApp.swift */,
 				F220A6B6266F041B00319F2F /* ContentView.swift */,
+				F220A6C5266F082200319F2F /* TestMapView.swift */,
+				F220A6C3266F053500319F2F /* TestViewModel.swift */,
 				F220A6B8266F041D00319F2F /* Assets.xcassets */,
 				F220A6BD266F041D00319F2F /* Info.plist */,
 				F220A6BA266F041D00319F2F /* Preview Content */,
@@ -138,6 +144,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F220A6C4266F053500319F2F /* TestViewModel.swift in Sources */,
+				F220A6C6266F082200319F2F /* TestMapView.swift in Sources */,
 				F220A6B7266F041B00319F2F /* ContentView.swift in Sources */,
 				F220A6B5266F041B00319F2F /* TestProjectApp.swift in Sources */,
 			);

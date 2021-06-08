@@ -1,21 +1,24 @@
-//
-//  ContentView.swift
-//  TestProject
-//
-//  Created by Hannah Krolewski on 6/7/21.
-//
 
 import SwiftUI
+import MapKit
 
 struct ContentView: View {
+    
+    @ObservedObject var testViewModel = TestViewModel()
+    @State var map = MKMapView()
+
+    var SearchingButtonText: some View {
+            return Text("Test" )
+    }
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+            VStack {
+            
+                TestMapView(map: self.$map, locations: $testViewModel.locations)
+                
+            }.onAppear() {
+                self.testViewModel.fetchData()
+              }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
